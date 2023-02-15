@@ -35,11 +35,11 @@ def menor_rota(rotas, coordens):
     limite = 10**4
     menor = str
     for r in rotas:
-        n_passos = 0
+        custo = 0
         for p in range(len(r)-1):
-            n_passos += abs(coordens[r[p]][0] - coordens[r[p-1]][0]) + abs(coordens[r[p]][1] - coordens[r[p-1]][1])
+            custo += abs(coordens[r[p]][0] - coordens[r[p-1]][0]) + abs(coordens[r[p]][1] - coordens[r[p-1]][1])
         t = [i for i in r[1:(len(r)-1)]]
-        passos[" ". join(t)] = n_passos
+        passos[" ". join(t)] = custo
 
     for i in passos.items():
         k, q = i
