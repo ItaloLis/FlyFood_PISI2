@@ -32,7 +32,7 @@ def permutacao(coordens, i=0):
 
 def menor_rota(rotas, coordens):
     passos = {}
-    limite = 10**6
+    limite = 10**4
     menor = str
     for r in rotas:
         n_passos = 0
